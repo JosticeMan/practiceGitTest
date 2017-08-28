@@ -1,7 +1,46 @@
+<!DOCTYPE html>
+<!-- Creator: Justin Yau  -->
 <html>
-	<body>
-		<ul>
-			<li> Hello </li> 
-		</ul>
+
+	<head>
+		<title> The Simple Counter </title>
+		<style> </style>
+		<script> 
+		
+			function initialize() 
+			{
+				count = 0;
+				jCtrDiv = document.getElementById("ctrdiv");
+				display();
+			}
+			
+			function display() 
+			{
+				jCtrDiv.innerHTML = count;
+			}
+			
+			function add1()
+			{
+				count++;
+				display();
+			}
+			
+			function subtract1()
+			{
+				count--;
+				display();
+			}
+			
+		</script>
+	</head>
+	
+	<body onload = "initialize();">
+		<div id = "ctrdiv"> 
+			Counter Number Goes Here
+		</div>
+		<hr />
+		<button onclick = "add1();"> Add 1 </button> 
+		<button onclick = "subtract1();"> Subtract 1 </button> 
 	</body>
+	
 </html>
